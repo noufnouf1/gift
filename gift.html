@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <title>GIFT</title>
+        <style>
+           body {
+                background-image: url(ChatGPT\ Image\ Jul\ 20\,\ 2025\,\ 03_00_43\ AM.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-family: 'Press Start 2P', cursive;
+                color: black;
+                font-size: 22px;
+                height: 100vh;
+                margin: 0; 
+                flex-direction: column;       
+            }
+            .button {
+                background-color: rgb(250, 180, 192);
+                padding: 15px;
+                margin: 10px;
+                width: 200px;
+                font-size: 24px;
+                margin-top: 100px;
+                font-family: 'Press Start 2P', cursive;
+                text-align: center;
+                color: black;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid black;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+            }
+            .button:hover {
+                background-color: rgb(250, 108, 132);
+                transform: scale(1.05);
+            }
+    
+            .floating-heart {
+                position: fixed;
+                width: 80px;
+                animation: float 3s ease-in-out infinite;
+                z-index: 5;
+            }
+            .floating-heart img {
+                width: 100%;
+                image-rendering: pixelated;
+            }
+            @keyframes float {
+                0% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+                100% {
+                    transform: translateY(0px);
+                }
+            }
+            .page2 {
+                background-image: url(ghaba.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+                display: none;
+                height: 100vh;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;    
+            }
+            .character-row {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                margin-top: 50px;
+
+            }
+
+            .charactere {
+                background: none;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                
+            }
+            .charactere-img {
+                width: 150px;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+                display: flex;
+            }
+            .charactere-img:hover {
+                transform: scale(1.05);
+            }
+
+            .page3 {
+                background-image: url(sky.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                height: 100vh;
+                width: 100%;
+                margin: 0;
+            }
+
+            .waving {
+                animation: wave 1.5s ease-in-out infinite;
+                transform: bottom center;
+                margin: 0;
+            }
+
+            @keyframes wave {
+                0%  { transform: rotate(0deg);}
+                25% { transform: rotate(5deg);}
+                50% { transform: rotate(-5deg);}
+                75% { transform: rotate(5deg);}
+                100%{ transform: rotate(0deg);}
+            }
+
+            .butterfly {
+                position: absolute;
+                top: 50%;
+                left: -100%;
+                width: 150px;
+                animation: butterfly 7s linear infinite;
+                margin: 0;
+            }
+            @keyframes butterfly {
+                0% {
+                    left: -100px;
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-50px);
+                }
+                100% {
+                    left: 100%;
+                    transform: translateY(0px);
+                }
+            }
+
+            .butterfly-bleu {
+                position: absolute;
+                top: 50%;
+                right: -100%;
+                width: 150px;
+                animation: butterflybleu 7s linear infinite;
+                margin: 0;
+            }
+            @keyframes butterflybleu {
+                0% {
+                    right: -100px;
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-50px);
+                }
+                100% {
+                    right: 100%;
+                    transform: translateY(0px);
+                }
+            }
+
+            .page4 {
+                background-image: url(ghaba.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                display: none;
+                height: 100vh;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .outfit-row {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            .outfit {
+                border: none;
+                padding: 0;
+                background: none;
+                cursor: pointer;
+            }
+
+            .outfit-img {
+                display: flex;
+                width: 100px;
+                border-radius: 30px;
+                transition: all 0.3s ease;
+            }
+
+            .outfit-img:hover {
+                transform: scale(1.05);
+            }
+            
+            .page5 {
+                display: none;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                background-image: url(ghaba.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+                height: 100vh;
+                width: 100%;
+                margin: 0;
+                flex-direction: column;
+            }
+        
+            .cakes {
+                background: none;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+            }
+
+            .cakes-row {
+                gap: 100px;
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .cakes-img {
+                border-radius: 20px;
+                display: flex;
+                width: 200px;
+                transition: all 0.3s ease;
+            }
+
+            .cakes-img:hover {
+                transform: scale(1.05);
+            }
+
+            .page6 {
+                background-image: url(123.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-attachment: fixed;
+                height: 100vh;
+                width: 100%;
+                margin: 0;
+                display: none;
+                align-items: center;
+                justify-content: center;
+            }
+
+           .balloon {
+            position: absolute;
+            width: 150px;
+            bottom: -100px;
+            left: 50%;
+            animation: up 6s ease-in-out infinite;
+            transform: translateX(-50%);
+           }
+
+           .balloon.pop img {
+            opacity: 0;
+            transform: scale(1.05);
+           }
+
+           @keyframes up {
+            0% { transform: translateY(0) translateX(-50px);}
+            100% { transform: translateY(-800px) translateX(-50px);}
+           }
+
+
+
+            .page7 {
+                background-image: url(ghaba.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-attachment: fixed;
+                display: none;  
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100%;
+                flex-direction: column;
+            }
+            .gift-row {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 100px;
+            }
+            .gift {
+                background: none;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+            }
+            .gift-img {
+                width: 200px;
+                border-radius: 20px;
+                display: flex;
+                transition: all 0.3s ease;
+            }
+            .gift-img:hover {
+                transform: scale(1.05);
+            }
+
+            .hidden-surprise {
+                opacity: 0;
+                transform: scale(0);
+                position: absolute;
+                transform: translateY(-50px);
+            }
+
+            .show-surprise {
+                opacity: 1;
+                transform: translateY(-350px) translateX(50px) scale(1);
+            }
+
+
+
+        </style>
+        </head>
+        <body>
+            <!--page1-->
+            <div id="page1">
+            <h1>welcome</h1>
+            <p>please click to start</p>    
+            <button id="btn" class="button">play</button>
+            <audio id="mario" autoplay loop src="roblox-minecraft-fortnite-video-game-music-358426.mp3"></audio>
+     
+            <!--hearts-->  
+            <div class="floating-heart" style="top: 5%; left: 5%;">
+            <img src="heart.png" alt="heart">
+            </div>
+
+            <div class="floating-heart" style="top: 15%; left: 45%;">
+            <img src="heart.png" alt="heart">
+            </div>
+
+            <div class="floating-heart" style="top: 5%; left: 90%;">
+                <img src="heart.png" alt="heart">
+            </div> 
+
+            <div class="floating-heart" style="top: 80%; left: 30%;">
+                <img src="heart.png" alt="heart">
+            </div>
+
+             <div class="floating-heart" style="top: 70%; left: 90%;">
+                <img src="heart.png" alt="heart">
+             </div>
+
+              <div class="floating-heart" style="top: 50%; left: 15%;">
+                <img src="heart.png" alt="heart">
+            </div>
+
+             <div class="floating-heart" style="top: 87%; left: 3%;">
+                <img src="heart.png" alt="heart">
+             </div>
+
+              <div class="floating-heart" style="top: 50%; left: 70%;">
+                <img src="heart.png" alt="heart">
+              </div>
+
+               <div class="floating-heart" style="top: 80%; left: 75%;">
+                <img src="heart.png" alt="heart">
+               </div>
+            </div>
+
+               <!--page2-->
+               <div class="page2" id="page2">
+               <h1>choose your charactere</h1>
+               <div class="character-row">
+               <button class="charactere" id="button-1">
+                <img src="character1.png" class="charactere-img" style="width: 175px;">
+               </button>
+
+               <button class="charactere" id="button-2">
+                <img src="character2.png" class="charactere-img" style="width: 135px;">
+               </button>
+
+               <button class="charactere" id="button-3">
+               <img src="character3.png" class="charactere-img">
+               </button>
+
+               <button class="charactere" id="button-4">
+               <img src="character4.png" class="charactere-img" style="width: 175px;">
+               </button>
+
+               </div>
+               </div>
+
+               <!--page3-->
+               <div class="page3" id="page3">
+                <h3>she kinda looks like you</h3>
+                <img id="choosenCharacter" alt="AMNA" src="" class="charactere-img waving" style="width: 250px;">
+
+                <img class="butterfly" src="fly.png" alt="butterfly" style="top: 20%;" animation-delay: 0s>
+                <img class="butterfly" src="fly.png" alt="butterfly" style="top: 50%;" animation-delay: 5s>
+                <img class="butterfly" src="fly.png" alt="butterfly" style="top: 80%;" animation-delay: 10s>
+
+                <img class="butterfly-bleu" src="fly2.png" alt="butterfly" style="top: 35%;">
+                <img class="butterfly-bleu" src="fly2.png" alt="butterfly" style="top: 65%;">
+                <img class="butterfly-bleu" src="fly2.png" alt="butterfly" style="top: 10%;">
+                <button class="button" id="clicker" style="margin-top: 50px;">next</button>
+               </div>
+               <!--page4-->
+               <div class="page4" id="page4">
+                <h4>choose your outfit</h4>
+                <div class="outfit-row">
+
+                <button class="outfit" id="outfit-1">
+                    <img src="hijab.png" class="outfit-img" style="width: 270px; height: 45vh; margin-right: 50px;">
+                </button>
+
+                <button class="outfit" id="outfit-2">
+                    <img src="outfit1.png" class="outfit-img" style="width: 250px; margin-right: 50px;">
+                </button>
+
+                 <button class="outfit" id="outfit-3">
+                    <img src="outfit3.png" class="outfit-img" style="width: 250px;">
+                </button>
+
+                <button class="outfit" id="outfit-4">
+                    <img src="outfit4.png" class="outfit-img" style="width: 250px; margin-left: 70px;">
+                </button>
+                
+               </div>
+               </div>
+
+               <!--page5-->
+               <div class="page5" id="page5">
+                <h5>choose your cake</h5>
+                <div class="cakes-row">
+                    <button id="cake-1" class="cakes">
+                        <img src="cake1.png" class="cakes-img">
+                    </button>
+                    <button class="cakes" id="cake-2">
+                        <img src="cake2.png" class="cakes-img">
+                    </button>
+                    <button class="cakes" id="cake-3">
+                        <img src="cake3.png" class="cakes-img">
+                    </button>
+                </div>
+               </div>
+
+               <!--page6-->
+               <div class="page6" id="page6">
+                <img class="balloon" src="balloon2.webp" style="left: -80%;">
+                <img class="balloon" src="balloon4.webp" style="right: 30%;">
+               </div>
+
+               <!--page7-->
+               <div class="page7" id="--page7--">
+                choose your gift
+                <div class="gift-row">
+                    <button id="gift-1" class="gift">
+                    <img src="gift4.png" class="gift-img" style="margin-top: 150px;">
+                    <div class="hidden-surprise">
+                    <img src="bear.png" style="width: 150px;">
+                    </div>
+                    </button>
+
+                    <button id="gift-2" class="gift">
+                        <img src="gift2.png" class="gift-img"  style="margin-top: 150px;">
+                        <div class="hidden-surprise">
+                            <img src="flower.png" style="width: 150px;">
+                        </div>
+                    </button>
+
+                     <button id="gift-3" class="gift">
+                        <img src="gift3.png" class="gift-img"  style="margin-top: 150px;">
+                        <div class="hidden-surprise">
+                            <img src="cat.png" style="width: 150px;">
+                        </div>
+                    </button>
+                </div>
+               </div>
+        <script>
+
+// PAGE1 
+        const page1 = document.getElementById("page1");
+        const page2 = document.getElementById("page2");
+        const btn = document.getElementById("btn");
+        const music = document.getElementById("mario");
+
+        btn.addEventListener("click", function () {
+            music.play ();
+            page1.style.display = "none";
+            page2.style.display = "flex";
+        });
+// PAGE2
+            const  page3 = document.getElementById("page3");
+            const character1 = document.getElementById("button-1");
+            const character2 = document.getElementById("button-2");
+            const character3 = document.getElementById("button-3");
+            const character4 = document.getElementById("button-4");
+
+            // character1
+            character1.addEventListener("click" , function() {
+                page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "flex";
+
+                const choosenimg = document.getElementById("choosenCharacter");
+                choosenimg.src = "character1.png"; 
+            }); 
+
+            // character2            
+            character2.addEventListener("click" , function() {
+                page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "flex";
+
+                const choosenimg = document.getElementById("choosenCharacter");
+                choosenimg.src = "character2.png";
+            });
+
+            // character3
+            character3.addEventListener("click" , function() {
+                page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "flex";
+
+                const choosenimg = document.getElementById("choosenCharacter");
+                choosenimg.src = "character3.png"; 
+            });
+
+             // character4
+            character4.addEventListener("click" , function() {
+                page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "flex";
+
+                const choosenimg = document.getElementById("choosenCharacter");
+                choosenimg.src = "character4.png";
+            });
+
+// PAGE3 
+            const clicker = document.getElementById("clicker");
+            clicker.addEventListener("click" , function () {
+                page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "none";
+                page4.style.display = "flex";
+            });
+// PAGE4
+             //outfit1
+            const outfit1 = document.getElementById("outfit-1");
+            outfit1.addEventListener("click", function() {
+
+                page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "none";
+                page4.style.display = "none";
+                page5.style.display = "flex";
+            });
+            //outfit2
+            const outfit2 = document.getElementById("outfit-2");
+            outfit2.addEventListener("click", function () {
+                 page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "none";
+                page4.style.display = "none";
+                page5.style.display = "flex";
+            });
+
+             //outfit3
+            const outfit3 = document.getElementById("outfit-3");
+            outfit3.addEventListener("click", function () {
+                 page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "none";
+                page4.style.display = "none";
+                page5.style.display = "flex";
+            });
+        
+            //outfit4 
+             const outfit4 = document.getElementById("outfit-4");
+            outfit4.addEventListener("click", function () {
+                page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "none";
+                page4.style.display = "none";
+                page5.style.display = "flex";
+            });
+    
+//PAGE 5
+            //cake1
+            const cake1 = document.getElementById("cake-1");
+            cake1.addEventListener("click" , function() {
+                page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "none";
+                page4.style.display = "none";
+                page5.style.display = "none";
+                page6.style.display = "flex";
+            });
+
+            //cake2
+            const cake2 = document.getElementById("cake-2");
+            cake2.addEventListener("click" , function() {
+                 page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "none";
+                page4.style.display = "none";
+                page5.style.display = "none";
+                page6.style.display = "flex";
+            });
+
+            //cake3
+            const cake3 = document.getElementById("cake-3");
+            cake3.addEventListener("click", function () {
+                page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "none";
+                page4.style.display = "none";
+                page5.style.display = "none";
+                page6.style.display = "flex";
+            });
+//page6 
+            const balloon = document.querySelector('.balloon');
+
+balloon.addEventListener('click', function () {
+  balloon.classList.add('pop');
+
+  // Optional: remove balloon from DOM after animation
+  setTimeout(() => {
+    balloon.style.display = 'none';
+  }, 300); // match the transition time
+});
+
+
+//page7
+      const gifts = document.querySelectorAll(".gift");
+
+gifts.forEach((gift) => {
+    const surprise = gift.querySelector(".hidden-surprise");
+
+    gift.addEventListener("click", () => {
+        surprise.classList.toggle("show-surprise");
+    });
+});
+
+        </script>
+        </body>
+</html>
